@@ -1,0 +1,19 @@
+{
+  "name": "couch-gag-common-lib",
+  "version": "1.0.0",
+  "description": "common utils and types for couch-gag-server & couch-gag-website",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "NickG",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "fmt": "prettier --write ."
+  },
+  "devDependencies": {
+    "chalk": "^5.0.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.3"
+  }
+}
