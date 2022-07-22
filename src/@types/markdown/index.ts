@@ -1,5 +1,5 @@
 export type Story = {
-meta: {
+  meta: {
     readonly episodeKey: string;
     readonly seasonKey: string;
     genres: string[];
@@ -7,37 +7,36 @@ meta: {
     subtitle?: string;
     title: string;
     key: string;
-};
-readonly content: string;
+  };
+  readonly content: string;
 };
 
 export type StoryKey = {
-readonly episodeKey: string;
-readonly seasonKey: string;
+  readonly episodeKey: string;
+  readonly seasonKey: string;
 };
 
 export type StoryMeta = {
-title: string;
-subtitle: string;
-author?: string;
-img: string;
-genres?: string[];
-readonly episodeKey: string;
-readonly seasonKey: string;
-readonly key: string;
+  title: string;
+  subtitle: string;
+  author?: string;
+  img: string;
+  genres?: string[];
+  readonly episodeKey: string;
+  readonly seasonKey: string;
+  readonly key: string;
 };
 
-
 export type StoryCollection = {
-collection: { [x: string]: StoryMeta };
+  collection: { [x: string]: StoryMeta };
 };
 
 export type StoryRowProps = {
-imgSrc: string;
-title: string;
-subtitle: string;
-genres: string[];
-episodeKey: string;
-seasonKey: string;
-index: number;
+  imgSrc: string;
+  title: string;
+  subtitle: string;
+  genres: string[];
+  episodeKey: string;
+  seasonKey: string;
+  index: number;
 };
