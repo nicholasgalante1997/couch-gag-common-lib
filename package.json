@@ -1,15 +1,23 @@
 {
-  "name": "couch-gag-common-lib",
+  "name": "@nickgdev/couch-gag-common-lib",
   "version": "1.0.0",
   "description": "common utils and types for couch-gag-server & couch-gag-website",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "author": "NickG",
-  "license": "MIT",
-  "private": false,
+  "readme": "README.md",
+  "author": "NickGDev",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "clean:dist": "rm -rf dist/",
+    "clean:depsdeep": "rm -rf node_modules/ package-lock.json",
+    "clean:deps": "rm -rf node_modules/",
+    "post-build": "cp README.md dist",
+    "prepare-publish": "echo \"cleaning...\" && yarn clean:dist && echo \"formatting...\" && yarn fmt && echo \"building...\" && yarn build && echo \"copying readme...\" && yarn post-build && echo \"done!\""
   },
   "devDependencies": {
     "chalk": "^5.0.1",
