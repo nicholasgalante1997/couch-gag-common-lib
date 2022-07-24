@@ -1,23 +1,23 @@
 {
   "name": "@nickgdev/couch-gag-common-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "common utils and types for couch-gag-server & couch-gag-website",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "readme": "README.md",
   "author": "NickGDev",
   "license": "ISC",
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
     "build": "tsc",
     "fmt": "prettier --write .",
-    "clean:dist": "rm -rf dist/",
+    "clean:lib": "rm -rf lib/",
     "clean:depsdeep": "rm -rf node_modules/ package-lock.json",
     "clean:deps": "rm -rf node_modules/",
-    "post-build": "cp README.md dist",
-    "prepare-publish": "echo \"cleaning...\" && yarn clean:dist && echo \"formatting...\" && yarn fmt && echo \"building...\" && yarn build && echo \"copying readme...\" && yarn post-build && echo \"done!\""
+    "post-build": "cp README.md lib",
+    "prepare-publish": "echo \"cleaning...\" && yarn clean:lib && echo \"formatting...\" && yarn fmt && echo \"building...\" && yarn build && echo \"copying readme...\" && yarn post-build && echo \"done!\""
   },
   "devDependencies": {
     "chalk": "^5.0.1",
