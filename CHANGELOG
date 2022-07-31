@@ -1,2 +1,5 @@
+# Changelog
+
 1.0.0 we were born, we were young and reckless
 1.0.1 renamed `dist/` folder to `/lib` as its more semantically correct, adjusted build config
+1.0.2 added Treatment, Font, Theme, Palette, Metric types
