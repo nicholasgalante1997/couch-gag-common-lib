@@ -1,8 +1,3 @@
-export {
-  FontTreatments,
-  control as fontControl,
-  t_serif,
-  t_serif_2
-} from './font';
-export { ColorTreatments, control as paletteControl } from './palette';
-export { ViewThemeTreatments, control as viewThemeControl } from './views';
+export * as heller_couch_font_treatment_pool from './font';
+export * as heller_couch_palette_treatment_pool from './palette';
+export * as heller_couch_view_theme_treatment_pool from './views';

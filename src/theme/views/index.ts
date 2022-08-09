@@ -1,23 +1,36 @@
 import { Theme, Treatment } from '../../@types';
-import { control as fontControl, t_serif, t_serif_2 } from '../font';
-import { control as paletteControl } from '../palette';
+import * as fontLab from '../font';
+import * as colorLab from '../palette';
 
 const WEBLAB_NAME = 'view-theme' as const;
 
-export const control: Treatment<Theme> = {
-  control: true,
-  id: WEBLAB_NAME + 'control-group',
-  treatment: false,
-  weblabName: WEBLAB_NAME,
-  meta: {
-    theme: {
-      font: fontControl.meta!.font,
-      palette: paletteControl.meta!.palette,
-      treatmentId: WEBLAB_NAME + 'control-group'
+const { ColorTreatments: c } = colorLab;
+const { FontTreatments: f } = fontLab;
+
+function reduceSerializedSubviewThemeTreatments() {
+  const ta: Treatment<Theme>[] = [];
+  for (const ctr of c) {
+    for (const ftr of f) {
+      ta.push({
+        control: (ctr.control && ftr.control) as boolean,
+        id: WEBLAB_NAME + ctr.id + '&' + ftr.id,
+        treatment:
+          ctr.control && ftr.control
+            ? false
+            : ctr.treatment + '&' + ftr.treatment,
+        weblabName: WEBLAB_NAME,
+        meta: {
+          theme: {
+            font: ftr.meta!.font,
+            palette: ctr.meta!.palette,
+            treatmentId: WEBLAB_NAME + ctr.id + '&' + ftr.id
+          }
+        }
+      });
     }
   }
-} as const;
+  return ta;
+}
 
-export const ViewThemeTreatments: readonly Treatment<Theme>[] = [
-  control
-] as const;
+export const ViewThemeTreatments: readonly Treatment<Theme>[] =
+  reduceSerializedSubviewThemeTreatments();
