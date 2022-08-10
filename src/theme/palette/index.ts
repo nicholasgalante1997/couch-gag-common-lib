@@ -1,20 +1,59 @@
 import { Palette, Treatment } from '../../@types';
-import { _heller_base } from '@nickgdev/hellerui';
+
+export const _heller_base_colors = {
+  yossarian: {
+    sea: '#023e8a'
+  },
+  nately: {
+    darkPurple: '#242038',
+    amethyst: '#9067C6',
+    middleBluePurple: '#8D86C9',
+    lavenderGray: '#CAC4CE',
+    linen: '#F7ECE1'
+  },
+  mcwatt: {
+    persianGreen: '#1B998B',
+    flickrPink: '#ED217C',
+    spaceCadet: '#2D3047',
+    canary: '#FFFD82',
+    lightSalmon: '#FF9B71'
+  },
+  majorMajor: {
+    majorvelous: '#FF9FB2',
+    piggyPink: '#FBDCE2',
+    vividBlueSky: '#0ACDFF',
+    greenSheen: '#60AB9A',
+    gainsboro: '#DEDEE0'
+  },
+  cathcart: {
+    romanSilver: '#84828F',
+    oldLavender: '#6A687A',
+    blackCoral: '#536271',
+    charcoal: '#3E4C5E',
+    prussianBlue: '#2C3D55'
+  },
+  dunbar: {
+    lightPink: '#FBB7C0',
+    amaranthPurple: '#B6244F',
+    flourescentBlue: '#34F6F2',
+    lightCyan: '#D1F5FF'
+  }
+} as const;
 
 const WEBLAB_NAME = 'color' as const;
 
 const {
-  colors: { cathcart, dunbar, majorMajor, mcwatt, nately, yossarian }
-} = _heller_base;
+ cathcart, dunbar, majorMajor, mcwatt, nately, yossarian 
+} = _heller_base_colors;
 
 function reduceColorArray() {
   const reduced: string[] = [];
-  Object.keys(_heller_base.colors).map((colorGroup) => {
-    type TransientColorKey = keyof typeof _heller_base.colors;
-    Object.keys(_heller_base.colors[colorGroup as TransientColorKey]).map(
+  Object.keys(_heller_base_colors).map((colorGroup) => {
+    type TransientColorKey = keyof typeof _heller_base_colors;
+    Object.keys(_heller_base_colors[colorGroup as TransientColorKey]).map(
       (colorTag) => {
         const parentColorGroup =
-          _heller_base.colors[colorGroup as TransientColorKey];
+          _heller_base_colors[colorGroup as TransientColorKey];
         reduced.push(
           parentColorGroup[colorTag as keyof typeof parentColorGroup]
         );
