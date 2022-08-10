@@ -1,6 +1,6 @@
 export type UserTreatment = {
   uId: string;
-  tid: string;
+  tId: string;
   id: string;
-  weblab?: string;
+  weblabTreatments?: string[];
 };
