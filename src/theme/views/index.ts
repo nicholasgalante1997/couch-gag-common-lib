@@ -22,7 +22,7 @@ function reduceSerializedSubviewThemeTreatments() {
         meta: {
           theme: {
             font: ftr.meta!.font,
-            palette: ctr.meta!.palette,
+            palette: ctr.meta!.color,
             treatmentId: WEBLAB_NAME + ctr.id + '&' + ftr.id
           }
         }
