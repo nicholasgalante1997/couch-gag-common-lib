@@ -2,7 +2,7 @@ import { Theme, Treatment } from '../../@types';
 import * as fontLab from '../font';
 import * as colorLab from '../palette';
 
-const WEBLAB_NAME = 'view-theme' as const;
+const WEBLAB_NAME = 'view-theme-' as const;
 
 const { ColorTreatments: c } = colorLab;
 const { FontTreatments: f } = fontLab;
@@ -17,7 +17,7 @@ function reduceSerializedSubviewThemeTreatments() {
         treatment:
           ctr.control && ftr.control
             ? false
-            : ctr.treatment + '&' + ftr.treatment,
+            : ctr.treatment + '-' + ftr.treatment,
         weblabName: WEBLAB_NAME,
         meta: {
           theme: {
