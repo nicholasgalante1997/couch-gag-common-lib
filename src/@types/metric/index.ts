@@ -3,7 +3,8 @@ export enum MetricType {
   STORY_VIEW = 'story-view',
   BUTTON_CLICK = 'button-click',
   SHARE = 'share',
-  ERROR = 'error'
+  ERROR = 'error',
+  NETWORK_CALL = 'http-call'
 }
 
 export type Metric<T extends MetricType> = {
