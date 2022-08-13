@@ -13,7 +13,7 @@ function reduceSerializedSubviewThemeTreatments() {
     for (const ftr of f) {
       ta.push({
         control: (ctr.control && ftr.control) as boolean,
-        id: WEBLAB_NAME + ctr.id + '&' + ftr.id,
+        id: WEBLAB_NAME + ctr.id + '-' + ftr.id,
         treatment:
           ctr.control && ftr.control
             ? false
