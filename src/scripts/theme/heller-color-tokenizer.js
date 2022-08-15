@@ -65,14 +65,6 @@ function templateColorCss(cssClass, color) {
 }
 
 /**
- * @name templateColorCss
- * @param {string} color
- */
-function templateColorCss(cssClass, color) {
-  return `.${cssClass}-bg { background: ${color}; }\n.${cssClass}-text { color: ${color}; }\n`;
-}
-
-/**
  * @name checkForStaleFile
  * @returns {boolean}
  */
