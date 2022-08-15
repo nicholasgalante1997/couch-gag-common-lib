@@ -25,9 +25,6 @@ jobs:
       - name: Prepare Publish
         run: yarn prepare-publish
 
-      - name: Build Lib
-        run: yarn build
-
       - name: Publish to npm
         run: npm publish
         env:
