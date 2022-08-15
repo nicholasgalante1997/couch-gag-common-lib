@@ -23,7 +23,7 @@ function reduceSerializedSubviewThemeTreatments() {
           theme: {
             font: ftr.meta!.font,
             palette: ctr.meta!.color,
-            treatmentId: WEBLAB_NAME + ctr.id + '&' + ftr.id
+            treatmentId: WEBLAB_NAME + ctr.id + '-' + ftr.id
           }
         }
       });
