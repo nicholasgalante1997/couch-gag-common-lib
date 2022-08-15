@@ -22,8 +22,8 @@ jobs:
           node-version: 18.x
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Install Dependencies
-        run: yarn
+      - name: Prepare Publish
+        run: yarn prepare-publish
 
       - name: Build Lib
         run: yarn build
