@@ -3,7 +3,7 @@ import { _heller_base_colors } from '../../constants';
 
 const WEBLAB_NAME = 'color' as const;
 
-const { cathcart, dunbar, majorMajor, mcwatt, nately, yossarian } =
+const { bullwinkle, cathcart, dunbar, majorMajor, mcwatt, nately, yossarian } =
   _heller_base_colors;
 
 function reduceColorArray() {
@@ -203,6 +203,24 @@ export const dunbar_light_4: Treatment<Palette> = {
   }
 };
 
+export const bullwinkle_dark_1: Treatment<Palette> ={
+  control: false,
+  id: WEBLAB_NAME + '-bullwinkle-dark-1',
+  treatment: '-bullwinkle-dark-1',
+  weblabName: WEBLAB_NAME,
+  meta: {
+    color: {
+      backgroundColor: bullwinkle.jet,
+      buttonColorOptions: [
+        ...Object.keys(bullwinkle).map((k) => bullwinkle[k as keyof typeof bullwinkle])
+      ],
+      headingPrimaryColor: bullwinkle.cambridgeBlue,
+      paragraphTextColor: bullwinkle.laurelGreen,
+      headingSecondaryColor: bullwinkle.cinereous
+    }
+  }
+}
+
 export const ColorTreatments: readonly Treatment<Palette>[] = [
   control_light,
   control_dark,
@@ -213,7 +231,8 @@ export const ColorTreatments: readonly Treatment<Palette>[] = [
   dunbar_light_1,
   dunbar_light_2,
   dunbar_light_3,
-  dunbar_light_4
+  dunbar_light_4,
+  bullwinkle_dark_1
 ] as const;
 
 export const getPaletteTreatmentKeys = () => ColorTreatments.map((t) => t.id);
