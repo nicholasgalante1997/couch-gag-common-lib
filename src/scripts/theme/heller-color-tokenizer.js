@@ -45,6 +45,13 @@ const _heller_base_colors = {
     amaranthPurple: '#B6244F',
     flourescentBlue: '#34F6F2',
     lightCyan: '#D1F5FF'
+  },
+  bullwinkle: {
+    laurelGreen: '#BDC4A7',
+    cambridgeBlue: '#92B4A7',
+    cinereous: '#93827F',
+    lightGoldenrodYellow: '#F3F9D2',
+    jet: '#2f2f2f'
   }
 };
 
