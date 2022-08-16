@@ -1,3 +1,11 @@
+.defaults-baseWhite-bg { background: #fff; }
+.defaults-baseWhite-text { color: #fff; }
+.defaults-baseBlack-bg { background: #000; }
+.defaults-baseBlack-text { color: #000; }
+.defaults-altBlack-bg { background: rgba(0,0,0,0.8); }
+.defaults-altBlack-text { color: rgba(0,0,0,0.8); }
+.defaults-altWhite-bg { background: rgba(270, 270, 270, 0.8); }
+.defaults-altWhite-text { color: rgba(270, 270, 270, 0.8); }
 .yossarian-sea-bg { background: #023e8a; }
 .yossarian-sea-text { color: #023e8a; }
 .nately-darkPurple-bg { background: #242038; }
