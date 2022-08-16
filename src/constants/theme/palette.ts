@@ -1,4 +1,10 @@
 export const _heller_base_colors = {
+  defaults: {
+    baseWhite: '#fff',
+    baseBlack: '#000',
+    altBlack: 'rgba(0,0,0,0.8)',
+    altWhite: 'rgba(270, 270, 270, 0.8)'
+  },
   yossarian: {
     sea: '#023e8a'
   },
