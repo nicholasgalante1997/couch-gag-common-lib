@@ -15,7 +15,7 @@
     "fmt": "prettier --write .",
     "clean": "yarn clean:depsdeep && yarn clean:lib",
     "clean:lib": "rm -rf lib/",
-    "clean:depsdeep": "rm -rf node_modules/ package-lock.json",
+    "clean:depsdeep": "rm -rf node_modules/ yarn.lock",
     "clean:deps": "rm -rf node_modules/",
     "post-build": "cp README.md lib/ && cp public/styles/heller.css lib/",
     "prepare-publish": "echo \"cleaning...\" && yarn clean && echo \"installing clean deps...\" && yarn && echo \"formatting...\" && yarn fmt && echo \"building...\" && yarn build && echo \"copying readme...\" && yarn post-build && echo \"done!\""

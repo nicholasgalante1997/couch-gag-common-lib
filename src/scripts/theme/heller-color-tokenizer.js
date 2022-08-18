@@ -78,13 +78,16 @@ function templateColorCss(cssClass, color) {
 }
 
 /**
- * @name checkForStaleFile
+ * @name checkForStaleDir
  * @returns {boolean}
  */
 function checkForStaleDir() {
+  console.log(`#checkForStaleDir() - beginning fs operations ...`);
   const dir = process.cwd();
   const filePath = path.resolve(dir, 'public', 'styles');
-  return fs.existsSync(filePath);
+  const flag = fs.existsSync(filePath);
+  console.log(`#checkForStaleDir() - /public/styles exists? - ${flag}`);
+  return flag;
 }
 
 /**
@@ -92,31 +95,40 @@ function checkForStaleDir() {
  * @returns {boolean}
  */
 function checkForStaleFile() {
+  console.log(`#checkForStaleFile() - beginning fs operations ...`);
   const dir = process.cwd();
   const filePath = path.resolve(dir, 'public', 'styles', 'heller.css');
-  return fs.existsSync(filePath);
+  const flag = fs.existsSync(filePath);
+  console.log(`#checkForStaleFile() - /public/styles/heller.css exists? - ${flag}`);
+  return flag;
 }
 
 function cleanDir() {
+  console.log(`#cleanDir() beginning fn call ...`);
   if (checkForStaleFile() || checkForStaleDir()) {
     try {
-      fs.rmDirSync(path.resolve(process.cwd(), 'public', 'styles'), {
+      console.log(`#cleanDir() file or directory path currently exists, attempting cleaning ...`);
+      fs.rmdirSync(path.resolve(process.cwd(), 'public', 'styles'), {
         recursive: true,
         force: true
       });
+      console.log(`#cleanDir() succeeded!`);
     } catch (e) {
-      console.log(['ERROR:', JSON.stringify(e)].join(' '));
+      throw new Error(e);
     }
   }
 }
 
 function writeDir() {
   try {
+    console.log(`#writeDir() making /public/styles directory...`);
     fs.mkdirSync(path.resolve(process.cwd(), 'public', 'styles'), {
-      recursive: true
+      recursive: true,
+      force: true
     });
+    console.log(`#writeDir() succeeded!`);
   } catch (e) {
-    console.log(['ERROR:', JSON.stringify(e)].join(' '));
+    throw new Error(e);
   }
 }
 
@@ -137,7 +149,7 @@ function writeOutCss() {
       bData
     );
   } catch (e) {
-    console.log(['ERROR:', JSON.stringify(e)].join(' '));
+    console.log(['ERROR:', e.message].join(' '));
   }
 }
 
