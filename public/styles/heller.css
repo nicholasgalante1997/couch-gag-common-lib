@@ -1,13 +1,19 @@
-.defaults-baseWhite-bg { background: #fff; }
-.defaults-baseWhite-text { color: #fff; }
-.defaults-baseBlack-bg { background: #000; }
-.defaults-baseBlack-text { color: #000; }
-.defaults-altBlack-bg { background: rgba(0,0,0,0.8); }
-.defaults-altBlack-text { color: rgba(0,0,0,0.8); }
-.defaults-altWhite-bg { background: rgba(270, 270, 270, 0.8); }
-.defaults-altWhite-text { color: rgba(270, 270, 270, 0.8); }
+.defaults-baseWhite-bg { background: #ffffff; }
+.defaults-baseWhite-text { color: #ffffff; }
+.defaults-baseBlack-bg { background: #000000; }
+.defaults-baseBlack-text { color: #000000; }
 .yossarian-sea-bg { background: #023e8a; }
 .yossarian-sea-text { color: #023e8a; }
+.yossarian-softViolet-bg { background: #6665FE; }
+.yossarian-softViolet-text { color: #6665FE; }
+.yossarian-charmander-bg { background: #ED6A5A; }
+.yossarian-charmander-text { color: #ED6A5A; }
+.yossarian-dandelion-bg { background: #F4F1BB; }
+.yossarian-dandelion-text { color: #F4F1BB; }
+.yossarian-petrol-bg { background: #272838; }
+.yossarian-petrol-text { color: #272838; }
+.yossarian-freshGrass-bg { background: #003844; }
+.yossarian-freshGrass-text { color: #003844; }
 .nately-darkPurple-bg { background: #242038; }
 .nately-darkPurple-text { color: #242038; }
 .nately-amethyst-bg { background: #9067C6; }
@@ -66,3 +72,13 @@
 .bullwinkle-lightGoldenrodYellow-text { color: #F3F9D2; }
 .bullwinkle-jet-bg { background: #2f2f2f; }
 .bullwinkle-jet-text { color: #2f2f2f; }
+.hoenn-misty-bg { background: #57E2E5; }
+.hoenn-misty-text { color: #57E2E5; }
+.hoenn-bulbasaur-bg { background: #45CB85; }
+.hoenn-bulbasaur-text { color: #45CB85; }
+.hoenn-ditto-bg { background: #777DA7; }
+.hoenn-ditto-text { color: #777DA7; }
+.hoenn-pupitar-bg { background: #153131; }
+.hoenn-pupitar-text { color: #153131; }
+.hoenn-magby-bg { background: #B02E0C; }
+.hoenn-magby-text { color: #B02E0C; }

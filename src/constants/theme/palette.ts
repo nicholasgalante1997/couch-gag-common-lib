@@ -1,12 +1,15 @@
 export const _heller_base_colors = {
   defaults: {
-    baseWhite: '#fff',
-    baseBlack: '#000',
-    altBlack: 'rgba(0,0,0,0.8)',
-    altWhite: 'rgba(270, 270, 270, 0.8)'
+    baseWhite: '#ffffff',
+    baseBlack: '#000000'
   },
   yossarian: {
-    sea: '#023e8a'
+    sea: '#023e8a',
+    softViolet: '#6665FE',
+    charmander: '#ED6A5A',
+    dandelion: '#F4F1BB',
+    petrol: '#272838',
+    freshGrass: '#003844'
   },
   nately: {
     darkPurple: '#242038',
@@ -48,5 +51,12 @@ export const _heller_base_colors = {
     cinereous: '#93827F',
     lightGoldenrodYellow: '#F3F9D2',
     jet: '#2f2f2f'
+  },
+  hoenn: {
+    misty: '#57E2E5',
+    bulbasaur: '#45CB85',
+    ditto: '#777DA7',
+    pupitar: '#153131',
+    magby: '#B02E0C'
   }
 } as const;
