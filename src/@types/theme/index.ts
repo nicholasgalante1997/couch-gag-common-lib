@@ -13,7 +13,9 @@ export type Font = {
 
 export type Palette = {
   backgroundColor: string;
-  paragraphTextColor: string;
+  backgroundComplimentColor: string;
+  backgroundTertiaryColor: string;
+  paragraphTextColor: string | string[];
   headingPrimaryColor: string;
   headingSecondaryColor?: string;
   buttonColorOptions: string[];

@@ -17,25 +17,115 @@ export const control: Treatment<Font> = {
   }
 } as const;
 
-export const t_serif: Treatment<Font> = {
+export const oswald_sans_serif: Treatment<Font> = {
   control: false,
-  id: WEBLAB_NAME + '-treatment-serif-group',
+  id: WEBLAB_NAME + '-treatment-oswald-sans-serif-group',
+  treatment: 'oswald-sans-serif',
+  weblabName: WEBLAB_NAME,
+  meta: {
+    font: {
+      google: {
+        family: 'Oswald'
+      },
+      fallback: 'sans-serif'
+    } as Font
+  }
+} as const;
+
+export const inter_sans_serif: Treatment<Font> = {
+  control: false,
+  id: WEBLAB_NAME + '-treatment-inter-sans-serif-group',
+  treatment: 'inter-sans-serif',
+  weblabName: WEBLAB_NAME,
+  meta: {
+    font: {
+      google: {
+        family: 'Inter'
+      },
+      fallback: 'sans-serif'
+    } as Font
+  }
+} as const;
+
+export const ubuntu_sans_serif: Treatment<Font> = {
+  control: false,
+  id: WEBLAB_NAME + '-treatment-ubuntu-sans-serif-group',
+  treatment: 'ubuntu-sans-serif',
+  weblabName: WEBLAB_NAME,
+  meta: {
+    font: {
+      google: {
+        family: 'Ubuntu'
+      },
+      fallback: 'sans-serif'
+    } as Font
+  }
+} as const;
+
+export const martel_serif: Treatment<Font> = {
+  control: true,
+  id: WEBLAB_NAME + '-treatment-martel-serif-group',
+  treatment: 'martel-serif',
+  weblabName: WEBLAB_NAME,
+  meta: {
+    font: {
+      google: {
+        family: 'Martel'
+      },
+      fallback: 'serif'
+    } as Font
+  }
+} as const;
+
+export const kreon_serif: Treatment<Font> = {
+  control: true,
+  id: WEBLAB_NAME + '-treatment-kreon-serif-group',
+  treatment: 'kreon-serif',
+  weblabName: WEBLAB_NAME,
+  meta: {
+    font: {
+      google: {
+        family: 'Kreon'
+      },
+      fallback: 'serif'
+    } as Font
+  }
+} as const;
+
+export const spectral_serif: Treatment<Font> = {
+  control: true,
+  id: WEBLAB_NAME + '-treatment-spectral-group',
+  treatment: 'spectral-serif',
+  weblabName: WEBLAB_NAME,
+  meta: {
+    font: {
+      google: {
+        family: 'Spectral'
+      },
+      fallback: 'serif'
+    } as Font
+  }
+} as const;
+
+export const sanchez_serif: Treatment<Font> = {
+  control: false,
+  id: WEBLAB_NAME + '-treatment-sanchez-serif-group',
   treatment: 1,
   weblabName: WEBLAB_NAME,
   meta: {
     font: {
       google: {
-        family: 'Newsreader'
+        family: 'Sanchez'
       },
       fallback: 'serif'
     } as Font
   }
 };
 
-export const t_serif_2: Treatment<Font> = {
+export const neuton_serif: Treatment<Font> = {
   control: false,
-  id: WEBLAB_NAME + '-treatment-serif-group-2',
-  treatment: 2,
+  id: WEBLAB_NAME + '-treatment-neuton-serif',
+  treatment: 'neuton-serif',
   weblabName: WEBLAB_NAME,
   meta: {
     font: {
@@ -49,6 +139,12 @@ export const t_serif_2: Treatment<Font> = {
 
 export const FontTreatments: readonly Treatment<Font>[] = [
   control,
-  t_serif,
-  t_serif_2
+  ubuntu_sans_serif,
+  inter_sans_serif,
+  oswald_sans_serif,
+  kreon_serif,
+  martel_serif,
+  neuton_serif,
+  sanchez_serif,
+  spectral_serif
 ] as const;

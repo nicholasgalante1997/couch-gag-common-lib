@@ -1,6 +1,6 @@
 {
   "name": "@nickgdev/couch-gag-common-lib",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "common utils and types for couch-gag-server & couch-gag-website",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,13 +12,14 @@
   ],
   "scripts": {
     "build": "tsc",
+    "build:styles": "node src/scripts/theme/heller-color-tokenizer.js",
     "fmt": "prettier --write .",
-    "clean": "yarn clean:depsdeep && yarn clean:lib",
+    "clean": "yarn clean:deps && yarn clean:styles && yarn clean:lib",
     "clean:lib": "rm -rf lib/",
-    "clean:depsdeep": "rm -rf node_modules/ package-lock.json",
-    "clean:deps": "rm -rf node_modules/",
+    "clean:styles": "rm -rf public/styles/",
+    "clean:deps": "rm -rf node_modules/ yarn.lock",
     "post-build": "cp README.md lib/ && cp public/styles/heller.css lib/",
-    "prepare-publish": "echo \"cleaning...\" && yarn clean && echo \"installing clean deps...\" && yarn && echo \"formatting...\" && yarn fmt && echo \"building...\" && yarn build && echo \"copying readme...\" && yarn post-build && echo \"done!\""
+    "prepare-publish": "echo \"cleaning...\" && yarn clean && echo \"installing clean deps...\" && yarn && echo \"formatting...\" && yarn fmt && echo \"running src/scripts/theme/heller-color-tokenizer.js\" && yarn build:styles && echo \"building...\" && yarn build && echo \"copying readme...\" && yarn post-build && echo \"done!\""
   },
   "devDependencies": {
     "chalk": "^5.0.1",

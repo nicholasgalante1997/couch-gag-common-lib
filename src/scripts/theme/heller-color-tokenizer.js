@@ -4,13 +4,16 @@ const fs = require('fs');
 // TODO: were duping colors here, need to single source this object
 const _heller_base_colors = {
   defaults: {
-    baseWhite: '#fff',
-    baseBlack: '#000',
-    altBlack: 'rgba(0,0,0,0.8)',
-    altWhite: 'rgba(270, 270, 270, 0.8)'
+    baseWhite: '#ffffff',
+    baseBlack: '#000000'
   },
   yossarian: {
-    sea: '#023e8a'
+    sea: '#023e8a',
+    softViolet: '#6665FE',
+    charmander: '#ED6A5A',
+    dandelion: '#F4F1BB',
+    petrol: '#272838',
+    freshGrass: '#003844'
   },
   nately: {
     darkPurple: '#242038',
@@ -52,6 +55,13 @@ const _heller_base_colors = {
     cinereous: '#93827F',
     lightGoldenrodYellow: '#F3F9D2',
     jet: '#2f2f2f'
+  },
+  hoenn: {
+    misty: '#57E2E5',
+    bulbasaur: '#45CB85',
+    ditto: '#777DA7',
+    pupitar: '#153131',
+    magby: '#B02E0C'
   }
 };
 
@@ -78,13 +88,16 @@ function templateColorCss(cssClass, color) {
 }
 
 /**
- * @name checkForStaleFile
+ * @name checkForStaleDir
  * @returns {boolean}
  */
 function checkForStaleDir() {
+  console.log(`#checkForStaleDir() - beginning fs operations ...`);
   const dir = process.cwd();
   const filePath = path.resolve(dir, 'public', 'styles');
-  return fs.existsSync(filePath);
+  const flag = fs.existsSync(filePath);
+  console.log(`#checkForStaleDir() - /public/styles exists? - ${flag}`);
+  return flag;
 }
 
 /**
@@ -92,31 +105,44 @@ function checkForStaleDir() {
  * @returns {boolean}
  */
 function checkForStaleFile() {
+  console.log(`#checkForStaleFile() - beginning fs operations ...`);
   const dir = process.cwd();
   const filePath = path.resolve(dir, 'public', 'styles', 'heller.css');
-  return fs.existsSync(filePath);
+  const flag = fs.existsSync(filePath);
+  console.log(
+    `#checkForStaleFile() - /public/styles/heller.css exists? - ${flag}`
+  );
+  return flag;
 }
 
 function cleanDir() {
+  console.log(`#cleanDir() beginning fn call ...`);
   if (checkForStaleFile() || checkForStaleDir()) {
     try {
-      fs.rmDirSync(path.resolve(process.cwd(), 'public', 'styles'), {
+      console.log(
+        `#cleanDir() file or directory path currently exists, attempting cleaning ...`
+      );
+      fs.rmdirSync(path.resolve(process.cwd(), 'public', 'styles'), {
         recursive: true,
         force: true
       });
+      console.log(`#cleanDir() succeeded!`);
     } catch (e) {
-      console.log(['ERROR:', JSON.stringify(e)].join(' '));
+      throw new Error(e);
     }
   }
 }
 
 function writeDir() {
   try {
+    console.log(`#writeDir() making /public/styles directory...`);
     fs.mkdirSync(path.resolve(process.cwd(), 'public', 'styles'), {
-      recursive: true
+      recursive: true,
+      force: true
     });
+    console.log(`#writeDir() succeeded!`);
   } catch (e) {
-    console.log(['ERROR:', JSON.stringify(e)].join(' '));
+    throw new Error(e);
   }
 }
 
@@ -137,7 +163,7 @@ function writeOutCss() {
       bData
     );
   } catch (e) {
-    console.log(['ERROR:', JSON.stringify(e)].join(' '));
+    console.log(['ERROR:', e.message].join(' '));
   }
 }
 
