@@ -58,7 +58,7 @@ export const treatment_major_major_blend: Treatment<Palette> = {
   meta: {
     color: {
       backgroundColor: majorMajor.greenSheen,
-      backgroundComplimentColor: majorMajor.gainsboro,
+      backgroundComplimentColor: bullwinkle.lightGoldenrodYellow,
       backgroundTertiaryColor: majorMajor.majorvelous,
       buttonColorOptions: [
         ...Object.values(majorMajor),
