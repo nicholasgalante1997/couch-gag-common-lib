@@ -1,10 +1,12 @@
-import { _heller_base_colors } from '../../../constants';
+import {
+  _heller_base_colors_,
+  _coolors_extension_pack_
+} from '../../../constants';
 
 export function deriveCssClassname(cHex: string) {
-  for (const k of Object.keys(_heller_base_colors)) {
-    for (const [vK, v] of Object.entries(
-      _heller_base_colors[k as keyof typeof _heller_base_colors]
-    )) {
+  const mashObj = { ..._heller_base_colors_, ..._coolors_extension_pack_ };
+  for (const k of Object.keys(mashObj)) {
+    for (const [vK, v] of Object.entries(mashObj[k as keyof typeof mashObj])) {
       if (v === cHex) {
         return {
           css: {

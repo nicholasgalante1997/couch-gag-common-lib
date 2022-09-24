@@ -1,35 +1,35 @@
-.defaults-baseWhite-bg { background: #ffffff; }
-.defaults-baseWhite-text { color: #ffffff; }
-.defaults-baseBlack-bg { background: #000000; }
-.defaults-baseBlack-text { color: #000000; }
+.defaults-base_white-bg { background: #ffffff; }
+.defaults-base_white-text { color: #ffffff; }
+.defaults-base_black-bg { background: #000000; }
+.defaults-base_black-text { color: #000000; }
 .yossarian-sea-bg { background: #023e8a; }
 .yossarian-sea-text { color: #023e8a; }
-.yossarian-softViolet-bg { background: #6665FE; }
-.yossarian-softViolet-text { color: #6665FE; }
+.yossarian-soft_violet-bg { background: #6665FE; }
+.yossarian-soft_violet-text { color: #6665FE; }
 .yossarian-charmander-bg { background: #ED6A5A; }
 .yossarian-charmander-text { color: #ED6A5A; }
 .yossarian-dandelion-bg { background: #F4F1BB; }
 .yossarian-dandelion-text { color: #F4F1BB; }
 .yossarian-petrol-bg { background: #272838; }
 .yossarian-petrol-text { color: #272838; }
-.yossarian-freshGrass-bg { background: #003844; }
-.yossarian-freshGrass-text { color: #003844; }
-.nately-darkPurple-bg { background: #242038; }
-.nately-darkPurple-text { color: #242038; }
+.yossarian-fresh_grass-bg { background: #003844; }
+.yossarian-fresh_grass-text { color: #003844; }
+.nately-dark_purple-bg { background: #242038; }
+.nately-dark_purple-text { color: #242038; }
 .nately-amethyst-bg { background: #9067C6; }
 .nately-amethyst-text { color: #9067C6; }
-.nately-middleBluePurple-bg { background: #8D86C9; }
-.nately-middleBluePurple-text { color: #8D86C9; }
-.nately-lavenderGray-bg { background: #CAC4CE; }
-.nately-lavenderGray-text { color: #CAC4CE; }
+.nately-middle_blue_purple-bg { background: #8D86C9; }
+.nately-middle_blue_purple-text { color: #8D86C9; }
+.nately-lavender_gray-bg { background: #CAC4CE; }
+.nately-lavender_gray-text { color: #CAC4CE; }
 .nately-linen-bg { background: #F7ECE1; }
 .nately-linen-text { color: #F7ECE1; }
-.mcwatt-persianGreen-bg { background: #1B998B; }
-.mcwatt-persianGreen-text { color: #1B998B; }
-.mcwatt-flickrPink-bg { background: #ED217C; }
-.mcwatt-flickrPink-text { color: #ED217C; }
-.mcwatt-spaceCadet-bg { background: #2D3047; }
-.mcwatt-spaceCadet-text { color: #2D3047; }
+.mcwatt-persian_green-bg { background: #1B998B; }
+.mcwatt-persian_green-text { color: #1B998B; }
+.mcwatt-flickr_pink-bg { background: #ED217C; }
+.mcwatt-flickr_pink-text { color: #ED217C; }
+.mcwatt-space_cadet-bg { background: #2D3047; }
+.mcwatt-space_cadet-text { color: #2D3047; }
 .mcwatt-canary-bg { background: #FFFD82; }
 .mcwatt-canary-text { color: #FFFD82; }
 .mcwatt-lightSalmon-bg { background: #FF9B71; }
@@ -82,3 +82,93 @@
 .hoenn-pupitar-text { color: #153131; }
 .hoenn-magby-bg { background: #B02E0C; }
 .hoenn-magby-text { color: #B02E0C; }
+.soft_woodland-morning_blue-bg { background: #8e9b90ff; }
+.soft_woodland-morning_blue-text { color: #8e9b90ff; }
+.soft_woodland-eton_blue-bg { background: #93c0a4ff; }
+.soft_woodland-eton_blue-text { color: #93c0a4ff; }
+.soft_woodland-laurel_green-bg { background: #b6c4a2ff; }
+.soft_woodland-laurel_green-text { color: #b6c4a2ff; }
+.soft_woodland-dutch_white-bg { background: #d4cdabff; }
+.soft_woodland-dutch_white-text { color: #d4cdabff; }
+.soft_woodland-pale_spring_bud-bg { background: #dce2bdff; }
+.soft_woodland-pale_spring_bud-text { color: #dce2bdff; }
+.hard_grassland-timberwolf-bg { background: #dad7cd; }
+.hard_grassland-timberwolf-text { color: #dad7cd; }
+.hard_grassland-laurel_green-bg { background: #a3b18a; }
+.hard_grassland-laurel_green-text { color: #a3b18a; }
+.hard_grassland-fern_green-bg { background: #588157; }
+.hard_grassland-fern_green-text { color: #588157; }
+.hard_grassland-hunter_green-bg { background: #3a5a40; }
+.hard_grassland-hunter_green-text { color: #3a5a40; }
+.hard_grassland-brunswick_green-bg { background: #344e41; }
+.hard_grassland-brunswick_green-text { color: #344e41; }
+.volcano-charcoal-bg { background: #424b54; }
+.volcano-charcoal-text { color: #424b54; }
+.volcano-pewter_blue-bg { background: #93a8ac; }
+.volcano-pewter_blue-text { color: #93a8ac; }
+.volcano-white-bg { background: #ffffff; }
+.volcano-white-text { color: #ffffff; }
+.volcano-cameo_pink-bg { background: #e2b4bd; }
+.volcano-cameo_pink-text { color: #e2b4bd; }
+.volcano-copper_rose-bg { background: #9b6a6c; }
+.volcano-copper_rose-text { color: #9b6a6c; }
+.evening_wear-midnight_eagle-bg { background: #0f5257; }
+.evening_wear-midnight_eagle-text { color: #0f5257; }
+.evening_wear-prussian_blue-bg { background: #0b3142; }
+.evening_wear-prussian_blue-text { color: #0b3142; }
+.evening_wear-herliotrope_gray-bg { background: #9c92a3; }
+.evening_wear-herliotrope_gray-text { color: #9c92a3; }
+.evening_wear-lang_lavender-bg { background: #c6b9cd; }
+.evening_wear-lang_lavender-text { color: #c6b9cd; }
+.evening_wear-longer_lang_lavender-bg { background: #d6d3f0; }
+.evening_wear-longer_lang_lavender-text { color: #d6d3f0; }
+.banned_sunday-tea_green-bg { background: #c9e4ca; }
+.banned_sunday-tea_green-text { color: #c9e4ca; }
+.banned_sunday-eton_blue-bg { background: #87bba2; }
+.banned_sunday-eton_blue-text { color: #87bba2; }
+.banned_sunday-steel_teal-bg { background: #55828b; }
+.banned_sunday-steel_teal-text { color: #55828b; }
+.banned_sunday-deep_space-bg { background: #3b6064; }
+.banned_sunday-deep_space-text { color: #3b6064; }
+.banned_sunday-charcoal-bg { background: #364958; }
+.banned_sunday-charcoal-text { color: #364958; }
+
+.winter {
+      background: hsla(217, 100%, 50%, 1);
+      background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+      background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+      background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+    }
+
+.summer {
+      background: hsla(152, 100%, 50%, 1);
+      background: linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+      background: -moz-linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+      background: -webkit-linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FF87", endColorstr="#60EFFF", GradientType=1 );
+    }
+
+.popsicle {
+      background: hsla(339, 100%, 55%, 1);
+      background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+      background: -moz-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+      background: -webkit-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF1B6B", endColorstr="#45CAFF", GradientType=1 );
+    }
+
+.cold {
+      background: hsla(221, 45%, 73%, 1);
+      background: linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+      background: -moz-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+      background: -webkit-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9BAFD9", endColorstr="#103783", GradientType=1 );
+    }
+
+.soft {
+      background: hsla(344, 97%, 63%, 1);
+      background: linear-gradient(90deg, hsla(344, 97%, 63%, 1) 0%, hsla(232, 90%, 59%, 1) 100%);
+      background: -moz-linear-gradient(90deg, hsla(344, 97%, 63%, 1) 0%, hsla(232, 90%, 59%, 1) 100%);
+      background: -webkit-linear-gradient(90deg, hsla(344, 97%, 63%, 1) 0%, hsla(232, 90%, 59%, 1) 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FC4778", endColorstr="#3952F5", GradientType=1 );
+    }

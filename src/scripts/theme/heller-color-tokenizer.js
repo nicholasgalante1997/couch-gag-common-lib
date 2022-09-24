@@ -1,31 +1,30 @@
 const path = require('path');
 const fs = require('fs');
 
-// TODO: were duping colors here, need to single source this object
-const _heller_base_colors = {
+const _heller_base_colors_ = {
   defaults: {
-    baseWhite: '#ffffff',
-    baseBlack: '#000000'
+    base_white: '#ffffff',
+    base_black: '#000000'
   },
   yossarian: {
     sea: '#023e8a',
-    softViolet: '#6665FE',
+    soft_violet: '#6665FE',
     charmander: '#ED6A5A',
     dandelion: '#F4F1BB',
     petrol: '#272838',
-    freshGrass: '#003844'
+    fresh_grass: '#003844'
   },
   nately: {
-    darkPurple: '#242038',
+    dark_purple: '#242038',
     amethyst: '#9067C6',
-    middleBluePurple: '#8D86C9',
-    lavenderGray: '#CAC4CE',
+    middle_blue_purple: '#8D86C9',
+    lavender_gray: '#CAC4CE',
     linen: '#F7ECE1'
   },
   mcwatt: {
-    persianGreen: '#1B998B',
-    flickrPink: '#ED217C',
-    spaceCadet: '#2D3047',
+    persian_green: '#1B998B',
+    flickr_pink: '#ED217C',
+    space_cadet: '#2D3047',
     canary: '#FFFD82',
     lightSalmon: '#FF9B71'
   },
@@ -65,14 +64,102 @@ const _heller_base_colors = {
   }
 };
 
+const _coolors_extension_pack_ = {
+  soft_woodland: {
+    morning_blue: '#8e9b90ff',
+    eton_blue: '#93c0a4ff',
+    laurel_green: '#b6c4a2ff',
+    dutch_white: '#d4cdabff',
+    pale_spring_bud: '#dce2bdff'
+  },
+  hard_grassland: {
+    timberwolf: '#dad7cd',
+    laurel_green: '#a3b18a',
+    fern_green: '#588157',
+    hunter_green: '#3a5a40',
+    brunswick_green: '#344e41'
+  },
+  volcano: {
+    charcoal: '#424b54',
+    pewter_blue: '#93a8ac',
+    white: '#ffffff',
+    cameo_pink: '#e2b4bd',
+    copper_rose: '#9b6a6c'
+  },
+  evening_wear: {
+    midnight_eagle: '#0f5257',
+    prussian_blue: '#0b3142',
+    herliotrope_gray: '#9c92a3',
+    lang_lavender: '#c6b9cd',
+    longer_lang_lavender: '#d6d3f0'
+  },
+  banned_sunday: {
+    tea_green: '#c9e4ca',
+    eton_blue: '#87bba2',
+    steel_teal: '#55828b',
+    deep_space: '#3b6064',
+    charcoal: '#364958'
+  }
+};
+
+const _coolors_gradient_palettes_pack_ = {
+  winter: {
+    css: `
+      background: hsla(217, 100%, 50%, 1);
+      background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+      background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+      background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+    `
+  },
+  summer: {
+    css: `
+      background: hsla(152, 100%, 50%, 1);
+      background: linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+      background: -moz-linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+      background: -webkit-linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FF87", endColorstr="#60EFFF", GradientType=1 );
+    `
+  },
+  popsicle: {
+    css: `
+      background: hsla(339, 100%, 55%, 1);
+      background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+      background: -moz-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+      background: -webkit-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF1B6B", endColorstr="#45CAFF", GradientType=1 );
+    `
+  },
+  cold: {
+    css: `
+      background: hsla(221, 45%, 73%, 1);
+      background: linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+      background: -moz-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+      background: -webkit-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9BAFD9", endColorstr="#103783", GradientType=1 );
+    `
+  },
+  soft: {
+    css: `
+      background: hsla(344, 97%, 63%, 1);
+      background: linear-gradient(90deg, hsla(344, 97%, 63%, 1) 0%, hsla(232, 90%, 59%, 1) 100%);
+      background: -moz-linear-gradient(90deg, hsla(344, 97%, 63%, 1) 0%, hsla(232, 90%, 59%, 1) 100%);
+      background: -webkit-linear-gradient(90deg, hsla(344, 97%, 63%, 1) 0%, hsla(232, 90%, 59%, 1) 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FC4778", endColorstr="#3952F5", GradientType=1 );
+    `
+  }
+};
+
 /**
  * @name reduceColorObject
  * @returns {string[][]}
  */
 function reduceColorObject() {
   let colors = [];
-  for (const k of Object.keys(_heller_base_colors)) {
-    for (const [vk, v] of Object.entries(_heller_base_colors[k])) {
+  let mashColorsObj = { ..._heller_base_colors_, ..._coolors_extension_pack_ };
+  let mashColorsStringArr = Object.keys(mashColorsObj);
+  for (const k of mashColorsStringArr) {
+    for (const [vk, v] of Object.entries(mashColorsObj[k])) {
       colors.push([`${k}-${vk}`, v]);
     }
   }
@@ -151,6 +238,12 @@ function writeOutCss() {
   let colorMatrix = reduceColorObject();
   for (const row of colorMatrix) {
     t += templateColorCss(row[0], row[1]);
+  }
+
+  for (const [k, v] of Object.entries(_coolors_gradient_palettes_pack_)) {
+    t += '\n';
+    t += `.${k} {${v.css}}`;
+    t += '\n';
   }
 
   const bData = Buffer.from(t, 'utf-8');
