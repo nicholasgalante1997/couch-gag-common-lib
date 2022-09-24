@@ -63,11 +63,11 @@ export const _heller_base_colors_ = {
 
 export const _coolors_extension_pack_ = {
   soft_woodland: {
-    morning_blue: '#8e9b90ff',
-    eton_blue: '#93c0a4ff',
-    laurel_green: '#b6c4a2ff',
-    dutch_white: '#d4cdabff',
-    pale_spring_bud: '#dce2bdff'
+    morning_blue: '#8e9b90',
+    eton_blue: '#93c0a4',
+    laurel_green: '#b6c4a2',
+    dutch_white: '#d4cdab',
+    pale_spring_bud: '#dce2bd'
   },
   hard_grassland: {
     timberwolf: '#dad7cd',
