@@ -122,6 +122,21 @@ export const sanchez_serif: Treatment<Font> = {
   }
 };
 
+export const amiri_serif: Treatment<Font> = {
+  control: false,
+  id: WEBLAB_NAME + '-treatment-amiri-serif-group',
+  treatment: 1,
+  weblabName: WEBLAB_NAME,
+  meta: {
+    font: {
+      google: {
+        family: 'Amiri'
+      },
+      fallback: 'serif'
+    } as Font
+  }
+};
+
 export const neuton_serif: Treatment<Font> = {
   control: false,
   id: WEBLAB_NAME + '-treatment-neuton-serif',
