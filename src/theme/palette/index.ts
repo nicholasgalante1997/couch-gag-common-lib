@@ -10,10 +10,6 @@ const WEBLAB_NAME = 'color-' as const;
 const {
   defaults,
   bullwinkle,
-  cathcart,
-  dunbar,
-  majorMajor,
-  mcwatt,
   nately,
   yossarian,
   hoenn
@@ -35,46 +31,7 @@ export function reduceColorArray() {
   return reduced;
 }
 
-export const control_mcwatt_accent_light: Treatment<Palette> = {
-  control: true,
-  id: WEBLAB_NAME + 'control-group-mcwatt-accent-light',
-  treatment: false,
-  weblabName: WEBLAB_NAME,
-  meta: {
-    color: {
-      backgroundColor: defaults.base_white,
-      backgroundComplimentColor: mcwatt.canary,
-      backgroundTertiaryColor: mcwatt.persian_green,
-      buttonColorOptions: Object.values(mcwatt),
-      headingPrimaryColor: mcwatt.persian_green,
-      paragraphTextColor: defaults.base_black,
-      headingSecondaryColor: mcwatt.space_cadet
-    }
-  }
-};
-
-export const treatment_major_major_blend: Treatment<Palette> = {
-  control: false,
-  id: WEBLAB_NAME + 'treatment-major-major-blend',
-  treatment: 'treatment-major-major-blend',
-  weblabName: WEBLAB_NAME,
-  meta: {
-    color: {
-      backgroundColor: majorMajor.green_sheen,
-      backgroundComplimentColor: bullwinkle.light_goldenrod_yellow,
-      backgroundTertiaryColor: majorMajor.majorvelous,
-      buttonColorOptions: [
-        ...Object.values(majorMajor),
-        ...Object.values(cathcart)
-      ],
-      headingPrimaryColor: majorMajor.gainsboro,
-      paragraphTextColor: defaults.base_white,
-      headingSecondaryColor: majorMajor.piggy_pink
-    }
-  }
-};
-
-export const treatment_yossarian_vibrant_mix: Treatment<Palette> = {
+export const yossarian_vibrant_mix: Treatment<Palette> = {
   control: false,
   id: WEBLAB_NAME + 'treatment-yoss-vibr-mix-sharp',
   treatment: 'yoss-vibr-mix-sharp',
@@ -92,25 +49,7 @@ export const treatment_yossarian_vibrant_mix: Treatment<Palette> = {
   }
 };
 
-export const treatment_nately_mcwatt_dim: Treatment<Palette> = {
-  control: false,
-  id: WEBLAB_NAME + 'treatment-nately-mcwatt-dim-mix',
-  treatment: 'nately-mcwatt-dim-mix',
-  weblabName: WEBLAB_NAME,
-  meta: {
-    color: {
-      backgroundColor: mcwatt.persian_green,
-      backgroundComplimentColor: mcwatt.canary,
-      backgroundTertiaryColor: mcwatt.space_cadet,
-      buttonColorOptions: [...Object.values(mcwatt), ...Object.values(nately)],
-      headingPrimaryColor: mcwatt.canary,
-      paragraphTextColor: nately.linen,
-      headingSecondaryColor: mcwatt.flickr_pink
-    }
-  }
-};
-
-export const treatment_hoenn_elite_four: Treatment<Palette> = {
+export const hoenn_elite_four: Treatment<Palette> = {
   control: false,
   id: WEBLAB_NAME + 'treatment-hoenn-elite-four',
   treatment: 'treatment-hoenn-elite-four',
@@ -128,7 +67,7 @@ export const treatment_hoenn_elite_four: Treatment<Palette> = {
   }
 };
 
-export const treatment_bullwinkle_dark_1: Treatment<Palette> = {
+export const bullwinkle_dark_1: Treatment<Palette> = {
   control: false,
   id: WEBLAB_NAME + 'bullwinkle-dark-1',
   treatment: 'bullwinkle-dark-1',
@@ -137,7 +76,7 @@ export const treatment_bullwinkle_dark_1: Treatment<Palette> = {
     color: {
       backgroundColor: bullwinkle.cambridge_blue,
       backgroundComplimentColor: bullwinkle.light_goldenrod_yellow,
-      backgroundTertiaryColor: bullwinkle.jet,
+      backgroundTertiaryColor: '#7e667a',
       buttonColorOptions: Object.values(bullwinkle),
       headingPrimaryColor: bullwinkle.light_goldenrod_yellow,
       paragraphTextColor: defaults.base_white,
@@ -146,25 +85,7 @@ export const treatment_bullwinkle_dark_1: Treatment<Palette> = {
   }
 };
 
-export const treatment_dunbar_light_skies: Treatment<Palette> = {
-  control: false,
-  id: WEBLAB_NAME + 'treatment-dunbar-light-skies',
-  treatment: 'treatment-dunbar-light-skies',
-  weblabName: WEBLAB_NAME,
-  meta: {
-    color: {
-      backgroundColor: dunbar.light_cyan,
-      backgroundComplimentColor: dunbar.amaranth_purple,
-      backgroundTertiaryColor: dunbar.light_pink,
-      buttonColorOptions: Object.values(dunbar),
-      headingPrimaryColor: dunbar.amaranth_purple,
-      paragraphTextColor: defaults.base_black,
-      headingSecondaryColor: dunbar.light_pink
-    }
-  }
-};
-
-export const treatment_soft_woodland: Treatment<Palette> = {
+export const soft_woodland_mix: Treatment<Palette> = {
   control: false,
   id: WEBLAB_NAME + 'treatment-soft-woodland',
   treatment: 'treatment-soft-woodland',
@@ -182,7 +103,7 @@ export const treatment_soft_woodland: Treatment<Palette> = {
   }
 };
 
-export const treatment_hard_grassland: Treatment<Palette> = {
+export const hard_grassland_mix: Treatment<Palette> = {
   control: false,
   id: WEBLAB_NAME + 'treatment-hard-grassland',
   treatment: 'treatment-hard-grassland',
@@ -200,7 +121,7 @@ export const treatment_hard_grassland: Treatment<Palette> = {
   }
 };
 
-export const treatment_volcano: Treatment<Palette> = {
+export const volcano_pure: Treatment<Palette> = {
   control: false,
   id: WEBLAB_NAME + 'treatment-volcano',
   treatment: 'treatment-volcano',
@@ -218,7 +139,7 @@ export const treatment_volcano: Treatment<Palette> = {
   }
 };
 
-export const treatment_evening_wear: Treatment<Palette> = {
+export const evening_wear_mix: Treatment<Palette> = {
   control: false,
   id: WEBLAB_NAME + 'treatment-evening-wear',
   treatment: 'treatment-evening-wear',
@@ -236,7 +157,7 @@ export const treatment_evening_wear: Treatment<Palette> = {
   }
 };
 
-export const treatment_banned_sunday: Treatment<Palette> = {
+export const banned_sunday_mix: Treatment<Palette> = {
   control: false,
   id: WEBLAB_NAME + 'treatment-banned-sunday',
   treatment: 'treatment-banned-sunday',
@@ -255,18 +176,14 @@ export const treatment_banned_sunday: Treatment<Palette> = {
 };
 
 export const ColorTreatments: readonly Treatment<Palette>[] = [
-  control_mcwatt_accent_light,
-  treatment_major_major_blend,
-  treatment_hoenn_elite_four,
-  treatment_nately_mcwatt_dim,
-  treatment_dunbar_light_skies,
-  treatment_yossarian_vibrant_mix,
-  treatment_bullwinkle_dark_1,
-  treatment_soft_woodland,
-  treatment_hard_grassland,
-  treatment_evening_wear,
-  treatment_volcano,
-  treatment_banned_sunday
+  hoenn_elite_four,
+  yossarian_vibrant_mix,
+  bullwinkle_dark_1,
+  soft_woodland_mix,
+  hard_grassland_mix,
+  evening_wear_mix,
+  volcano_pure,
+  banned_sunday_mix
 ] as const;
 
 export const getPaletteTreatmentKeys = () => ColorTreatments.map((t) => t.id);
