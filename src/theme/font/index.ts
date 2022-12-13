@@ -47,21 +47,6 @@ export const inter_sans_serif: Treatment<Font> = {
   }
 } as const;
 
-export const ubuntu_sans_serif: Treatment<Font> = {
-  control: false,
-  id: WEBLAB_NAME + '-treatment-ubuntu-sans-serif-group',
-  treatment: 'ubuntu-sans-serif',
-  weblabName: WEBLAB_NAME,
-  meta: {
-    font: {
-      google: {
-        family: 'Ubuntu'
-      },
-      fallback: 'sans-serif'
-    } as Font
-  }
-} as const;
-
 export const martel_serif: Treatment<Font> = {
   control: true,
   id: WEBLAB_NAME + '-treatment-martel-serif-group',
@@ -154,7 +139,6 @@ export const neuton_serif: Treatment<Font> = {
 
 export const FontTreatments: readonly Treatment<Font>[] = [
   control,
-  ubuntu_sans_serif,
   inter_sans_serif,
   oswald_sans_serif,
   kreon_serif,

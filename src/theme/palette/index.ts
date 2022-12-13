@@ -32,42 +32,6 @@ export function reduceColorArray() {
   return reduced;
 }
 
-export const yossarian_vibrant_mix: Treatment<Palette> = {
-  control: false,
-  id: WEBLAB_NAME + 'treatment-yoss-vibr-mix-sharp',
-  treatment: 'yoss-vibr-mix-sharp',
-  weblabName: WEBLAB_NAME,
-  meta: {
-    color: {
-      backgroundColor: yossarian.soft_violet,
-      backgroundComplimentColor: yossarian.dandelion,
-      backgroundTertiaryColor: yossarian.fresh_grass,
-      buttonColorOptions: Object.values(yossarian),
-      headingPrimaryColor: yossarian.dandelion,
-      paragraphTextColor: defaults.base_white,
-      headingSecondaryColor: yossarian.charmander
-    }
-  }
-};
-
-export const hoenn_elite_four: Treatment<Palette> = {
-  control: false,
-  id: WEBLAB_NAME + 'treatment-hoenn-elite-four',
-  treatment: 'treatment-hoenn-elite-four',
-  weblabName: WEBLAB_NAME,
-  meta: {
-    color: {
-      backgroundColor: hoenn.pupitar,
-      backgroundComplimentColor: hoenn.ditto,
-      backgroundTertiaryColor: hoenn.magby,
-      buttonColorOptions: Object.values(hoenn),
-      headingPrimaryColor: hoenn.bulbasaur,
-      paragraphTextColor: nately.linen,
-      headingSecondaryColor: hoenn.magby
-    }
-  }
-};
-
 export const bullwinkle_dark_1: Treatment<Palette> = {
   control: false,
   id: WEBLAB_NAME + 'bullwinkle-dark-1',
@@ -100,24 +64,6 @@ export const soft_woodland_mix: Treatment<Palette> = {
       headingPrimaryColor: soft_woodland.dutch_white,
       paragraphTextColor: defaults.base_white,
       headingSecondaryColor: soft_woodland.pale_spring_bud
-    }
-  }
-};
-
-export const hard_grassland_mix: Treatment<Palette> = {
-  control: false,
-  id: WEBLAB_NAME + 'treatment-hard-grassland',
-  treatment: 'treatment-hard-grassland',
-  weblabName: WEBLAB_NAME,
-  meta: {
-    color: {
-      backgroundColor: hard_grassland.brunswick_green,
-      backgroundComplimentColor: hard_grassland.laurel_green,
-      backgroundTertiaryColor: hard_grassland.fern_green,
-      buttonColorOptions: Object.values(hard_grassland),
-      headingPrimaryColor: hard_grassland.timberwolf,
-      paragraphTextColor: defaults.base_white,
-      headingSecondaryColor: hard_grassland.laurel_green
     }
   }
 };
@@ -195,14 +141,12 @@ export const lasercat_mix: Treatment<Palette> = {
 };
 
 export const ColorTreatments: readonly Treatment<Palette>[] = [
-  hoenn_elite_four,
-  yossarian_vibrant_mix,
   bullwinkle_dark_1,
   soft_woodland_mix,
-  hard_grassland_mix,
   evening_wear_mix,
   volcano_pure,
-  banned_sunday_mix
+  banned_sunday_mix,
+  lasercat_mix
 ] as const;
 
 export const getPaletteTreatmentKeys = () => ColorTreatments.map((t) => t.id);
