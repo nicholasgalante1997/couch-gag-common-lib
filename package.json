@@ -1,6 +1,6 @@
 {
   "name": "@nickgdev/couch-gag-common-lib",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "common utils and types for couch-gag-server & couch-gag-website",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

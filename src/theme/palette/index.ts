@@ -1,6 +1,7 @@
 import { Palette, Treatment } from '../../@types';
 import {
   _heller_base_colors_,
+  _lasercat_,
   _coolors_extension_pack_,
   _coolors_gradient_palettes_pack_
 } from '../../constants';
@@ -171,6 +172,24 @@ export const banned_sunday_mix: Treatment<Palette> = {
       headingPrimaryColor: defaults.base_white,
       paragraphTextColor: defaults.base_white,
       headingSecondaryColor: banned_sunday.charcoal
+    }
+  }
+};
+
+export const lasercat_mix: Treatment<Palette> = {
+  control: false,
+  id: WEBLAB_NAME + 'treatment-lasercat',
+  treatment: 'treatment-lasercat',
+  weblabName: WEBLAB_NAME,
+  meta: {
+    color: {
+      backgroundColor: _lasercat_.prp_dark_2,
+      backgroundComplimentColor: _lasercat_.pk_light,
+      backgroundTertiaryColor: _lasercat_.bl_light,
+      buttonColorOptions: Object.values(_lasercat_),
+      headingPrimaryColor: _lasercat_.pk_lightest,
+      paragraphTextColor: [defaults.base_white, _lasercat_.pk_mid],
+      headingSecondaryColor: _lasercat_.prp_light
     }
   }
 };

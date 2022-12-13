@@ -61,6 +61,19 @@ export const _heller_base_colors_ = {
   }
 } as const;
 
+export const _lasercat_ = {
+  prp_dark: '#010326',
+  prp_dark_2: '#020426',
+  prp_mid: '#150259',
+  prp_mid_2: '#1D0673',
+  prp_mid_3: '#2B2073',
+  prp_light: '#21038C',
+  pk_lightest: '#D92365',
+  pk_light: '#F20775',
+  pk_mid: '#8C0343',
+  bl_light: '#99F2E9'
+};
+
 export const _coolors_extension_pack_ = {
   soft_woodland: {
     morning_blue: '#8e9b90',
