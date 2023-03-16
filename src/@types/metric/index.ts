@@ -12,7 +12,7 @@ export interface IMetric<T extends MetricType> {
   subfield: string;
   target: string;
   value: 0 | 1;
-};
+}
 
 export class Metric<T extends MetricType> implements IMetric<T> {
   metricName: T;
@@ -20,19 +20,14 @@ export class Metric<T extends MetricType> implements IMetric<T> {
   target: string;
   value: 0 | 1;
 
-  constructor(
-    metricName: T,
-    subfield: string,
-    target: string,
-    value: 0 | 1,
-  ) {
+  constructor(metricName: T, subfield: string, target: string, value: 0 | 1) {
     this.metricName = metricName;
     this.subfield = subfield;
     this.target = target;
     this.value = value;
   }
 
-  parseMetricQueryParams(){
+  parseMetricQueryParams() {
     return `?metric=${this.metricName}&subfield=${this.subfield}&target=${this.target}&value=${this.value}`;
   }
 }

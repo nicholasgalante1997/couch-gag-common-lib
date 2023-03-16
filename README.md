@@ -11,7 +11,7 @@ Bad code is so difficult to maintain. Its not even funny. I am not laughing, do 
 **Couch Gag is a collection of microservices** and the list of associated services can be found below.
 
 - couch-gag-common-library
-  - A Typescript package, isomorphic, that supplied common utils to `couch-gag-server` and `couch-gag-website`. 
+  - A Typescript package, isomorphic, that supplied common utils to `couch-gag-server` and `couch-gag-website`.
   - These utils include loggers, theme primitives, and shared types.
   - It is a compile time dependency for `couch-gag-website` and `couch-gag-server`.
 - couch-gag-metrics-hub
@@ -20,8 +20,8 @@ Bad code is so difficult to maintain. Its not even funny. I am not laughing, do 
   - This server listens for incoming http requests, pulls metric values off the request, and maps it to a Metric type
 - couch-gag-server
   - A Node/Typescript/Express http server implementation
-  - Manages **STORY MARKUP** and serves **story collection data*, and *individual story data* to `couch-gag-website`
-  - pumps metric data about stories to `couch-gag-metrics-hub` 
+  - Manages **STORY MARKUP** and serves \*_story collection data_, and _individual story data_ to `couch-gag-website`
+  - pumps metric data about stories to `couch-gag-metrics-hub`
   - Stories are written in **MARKDOWN** and can be found in this package in `src/data/`
 - couch-gag-website
   - A typescript/nextjs/react application that acts as the frontend to serve **STORY MARKUP** through.

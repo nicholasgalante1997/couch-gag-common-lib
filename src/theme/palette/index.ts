@@ -8,13 +8,7 @@ import {
 
 const WEBLAB_NAME = 'color-' as const;
 
-const {
-  defaults,
-  bullwinkle,
-  nately,
-  yossarian,
-  hoenn
-} = _heller_base_colors_;
+const { defaults, bullwinkle, nately, yossarian, hoenn } = _heller_base_colors_;
 
 const { banned_sunday, evening_wear, hard_grassland, soft_woodland, volcano } =
   _coolors_extension_pack_;
@@ -140,13 +134,32 @@ export const lasercat_mix: Treatment<Palette> = {
   }
 };
 
+export const base_white: Treatment<Palette> = {
+  control: false,
+  id: WEBLAB_NAME + 'base_white',
+  treatment: 'base_white',
+  weblabName: WEBLAB_NAME,
+  meta: {
+    color: {
+      backgroundColor: defaults.base_white,
+      backgroundComplimentColor: defaults.base_black,
+      backgroundTertiaryColor: defaults.base_black,
+      buttonColorOptions: [defaults.base_black],
+      headingPrimaryColor: defaults.base_black,
+      paragraphTextColor: [defaults.base_black],
+      headingSecondaryColor: defaults.base_black
+    }
+  }
+};
+
 export const ColorTreatments: readonly Treatment<Palette>[] = [
   bullwinkle_dark_1,
   soft_woodland_mix,
   evening_wear_mix,
   volcano_pure,
   banned_sunday_mix,
-  lasercat_mix
+  lasercat_mix,
+  base_white
 ] as const;
 
 export const getPaletteTreatmentKeys = () => ColorTreatments.map((t) => t.id);
