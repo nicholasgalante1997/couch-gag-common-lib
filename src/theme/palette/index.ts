@@ -143,11 +143,11 @@ export const base_white: Treatment<Palette> = {
     color: {
       backgroundColor: defaults.base_white,
       backgroundComplimentColor: defaults.base_black,
-      backgroundTertiaryColor: defaults.base_black,
+      backgroundTertiaryColor: defaults.base_white,
       buttonColorOptions: [defaults.base_black],
-      headingPrimaryColor: defaults.base_black,
+      headingPrimaryColor: _lasercat_.pk_light,
       paragraphTextColor: [defaults.base_black],
-      headingSecondaryColor: defaults.base_black
+      headingSecondaryColor: _lasercat_.prp_dark
     }
   }
 };
